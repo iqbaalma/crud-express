@@ -7,9 +7,9 @@
 </head>
 <body>
     <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; min-height: 90vh;">
-        <h1>Edit Comment</h1>
+        <h1 style="margin-bottom: 5rem;">Edit Comment</h1>
         <form style="display: flex; justify-content: flex-start; align-items: flex-start; gap: 20px; flex-direction: column;" action="/comments/<%= comment.id %>?_method=PATCH" method="POST">
-            <section>
+            <section style="display: flex; justify-content: first baseline; gap: 10px; flex-direction: column;">
                 <label for="">Comment</label>
                 <textarea style="border-radius: 5px;" id="" name="desc" cols="30" rows="5" placeholder="Description"><%= comment.desc %></textarea>
             </section>

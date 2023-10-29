@@ -14,11 +14,18 @@
         <% for (let comment of comments) {%>
             <div style="border-left: 3px solid black; max-width: fit-content; padding-left: 2rem; margin-bottom: 3rem;">
                 <h3><%= comment.username  %></h3>
-                <p style="margin-bottom: 1.5rem; margin-top: -0.5rem;"><%= comment.desc  %></p>
-                <a href="http://localhost:8080/comments/<%= comment.id %>">Show more details</a>
-                <br />
-                <br />
-                <a href="http://localhost:8080/comments/<%= comment.id %>/edit">Edit comment</a>
+                <p style="margin-bottom: 1.5rem; margin-top: -0.5rem; font-style: italic;"><%= comment.desc  %></p>
+                <div style="display: flex; gap: 20px; justify-content: flex-start; flex-direction: row;">
+                    <div style="background-color: white; cursor: pointer; border: 1px solid black; border-radius: 5px; padding: 10px 20px; max-width: fit-content;">
+                        <a style="text-decoration: none; color: black;" href="http://localhost:8080/comments/<%= comment.id %>">Show more details</a>
+                    </div>
+                    <div style="background-color: blue; cursor: pointer; border: 1px solid black; border-radius: 5px; padding: 10px 20px; max-width: fit-content;">
+                        <a style="text-decoration: none; color: white;" href="http://localhost:8080/comments/<%= comment.id %>/edit">Edit</a>
+                    </div>
+                    <form action="/comments/<%= comment.id %>?_method=DELETE" method="POST">
+                        <button style="background-color: red; color: white; padding: 10px 20px; border-radius: 5px; cursor: pointer;" type="submit">Delete</button>
+                    </form>
+                </div>
             </div>
         <%}%>
     </div>
