@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comments</title>
+</head>
+<body>
+    <h1>Comments Result = <%= comment.id %></h1>
+    <div style="margin-left: 2rem;">
+        <div style="border-left: 3px solid black; max-width: fit-content; padding-left: 2rem; margin-bottom: 3rem;">
+            <h3><%= comment.username  %><h3>
+            <p style="margin-bottom: 1.5rem; margin-top: -0.5rem;"><%= comment.desc  %></p>
+        </div>
+    </div>
+    <div style="background-color: white; cursor: pointer; border: 1px solid black; border-radius: 5px; padding: 10px 20px; max-width: fit-content;">
+        <a style="text-decoration: none; color: black;" href="http://localhost:8080/comments">Back to comments</a>
+    </div>
+</body>
+</html>

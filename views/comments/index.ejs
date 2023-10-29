@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comments</title>
+</head>
+<body>
+    <h1>Comments</h1>
+    <div style="background-color: black; cursor: pointer; border-radius: 5px; padding: 10px 20px; max-width: fit-content;">
+        <a style="text-decoration: none; color: white;" href="http://localhost:8080/comments/create">Add Comments</a>
+    </div>
+    <div style="margin-left: 2rem;">
+        <% for (let comment of comments) {%>
+            <div style="border-left: 3px solid black; max-width: fit-content; padding-left: 2rem; margin-bottom: 3rem;">
+                <h3><%= comment.username  %></h3>
+                <p style="margin-bottom: 1.5rem; margin-top: -0.5rem;"><%= comment.desc  %></p>
+                <a href="http://localhost:8080/comments/<%= comment.id %>">Show more details</a>
+                <br />
+                <br />
+                <a href="http://localhost:8080/comments/<%= comment.id %>/edit">Edit comment</a>
+            </div>
+        <%}%>
+    </div>
+</body>
+</html>

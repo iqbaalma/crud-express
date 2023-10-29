@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Comments</title>
+</head>
+<body>
+    <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; min-height: 90vh;">
+        <h1>New Comment</h1>
+        <form style="display: flex; justify-content: flex-start; align-items: flex-start; gap: 20px; flex-direction: column;" action="/comments" method="POST">
+            <section>
+                <label for="">Username</label>
+                <input style="height: 40px; border-radius: 5px;" id="" type="text" name="username" placeholder="Type your username">
+            </section>
+            <section>
+                <label for="">Comment</label>
+                <textarea style="border-radius: 5px;" id="" name="desc" cols="30" rows="5" placeholder="Description"></textarea>
+            </section>
+            <button style="background-color: black; color: white; padding: 10px 20px; border-radius: 5px; cursor: pointer;" type="submit">Submit</button>
+            <div style="background-color: white; cursor: pointer; border: 1px solid black; border-radius: 5px; padding: 10px 20px; max-width: fit-content;">
+                <a style="text-decoration: none; color: black;" href="http://localhost:8080/comments">Back to comments</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
